@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>updatePage.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>
+    <meta http-equiv="description" content="this is my page"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    
+
+  </head>
+  
+  <body>
+  <form th:action="@{chanMember}" method="post">
+      <!-- 隐藏域 -->
+      <input type="hidden" name="id" th:field="${memberById.id}"/>
+      姓名：<input type="text" name="name" th:field="${memberById.name}"/><br/>
+      昵称：<input type="text" name="nickname" th:field="${memberById.nickname}"/><br/>
+      手机号：<input type="text" name="phoneNum" th:field="${memberById.phoneNum}"/><br/>
+      邮箱：<input type="text" name="email" th:field="${memberById.email}"/><br/>
+      <input type="submit" value="提交"/>
+  </form>
+  </body>
+</html>

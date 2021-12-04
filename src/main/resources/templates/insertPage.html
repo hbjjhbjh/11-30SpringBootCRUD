@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>insertPage.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>
+    <meta http-equiv="description" content="this is my page"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+  </head>
+  
+  <body>
+    	<form th:action="@{savefinall}" method="post">
+    		姓名：<input type="text" name="name"/><br/>
+    		昵称：<input type="text" name="nickname"/><br/>
+            手机号：<input type="text" name="phoneNum"/><br/>
+            邮箱：<input type="text" name="email"/><br/>
+    		<input type="submit" value="提交"/>
+    	</form>
+  </body>
+</html>

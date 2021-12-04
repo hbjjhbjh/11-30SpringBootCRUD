@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>查询页面</title>
+
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>
+    <meta http-equiv="description" content="this is my page"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+<table border="1" align="center">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>昵称</th>
+        <th>电话号码</th>
+        <th>邮箱</th>
+        <th colspan="2">操作</th>
+    </tr>
+    <tr th:each="users : ${listMember}">
+        <td th:text="${users.id}"/>
+        <td th:text="${users.name}"/>
+        <td th:text="${users.nickname}"/>
+        <td th:text="${users.phoneNum}"/>
+        <td th:text="${users.email}"/>
+        <td>
+            <a th:href="@{romersMember(id=${users.id})}" onclick="alert('删除该条数据！')">删除</a>
+        </td>
+        <td>
+            <a th:href="@{showAllById(id=${users.id})}">修改</a>
+        </td>
+    </tr>
+</table>
+<br/>
+<center><a th:href="@{insertPage.html}">新增用户</a></center>
+</body>
+</html>
